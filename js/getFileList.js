@@ -46,9 +46,17 @@ function setData () {
 		if (fileArr[i] !== '' && (fileSuffix === 'xls' || fileSuffix === 'xlsx' || fileSuffix === 'csv')) {
 			arr.push({
 				fileName: fileArr[i],
-				filePath: getDirPath() + '\\' + fileArr[i]
+				filePath: getDirPath() + '\\\\' + fileArr[i]
 			})
 		}
 	};
 	fileWrapper.innerHTML = node(arr);
+}
+
+/**
+ * ªÒ»°∫Í√¸¡Ó
+ */
+function getMacros () {
+	var dom = document.getElementById('macros');
+	return dom.value
 }
